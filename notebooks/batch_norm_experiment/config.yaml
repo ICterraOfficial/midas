@@ -1,0 +1,32 @@
+---
+  data:
+      train_xlsx_path: ../../data/processed/HospitalA/train.xlsx
+      val_xlsx_path: ../../data/processed/HospitalA/val.xlsx
+      test_xlsx_path: ../../data/processed/HospitalA/test.xlsx
+      classes:
+            'Benign': [1, 0]
+            'Malign': [0, 1]
+      batch_size: 8
+      inp_height: 2944
+      inp_width: 1920
+  model:
+    weight_path: ../../models/nyu_pretrained/sample_model_1.p
+  train:
+      lr: 0.0000064
+      lambda_loss: 1
+      beta: 0.000463
+      epoch: 50
+      parellel_mode: False
+      LossFunction: null
+      Optimizer: null
+  gmic_parameters:
+      device_type: cuda
+      gpu_number: 0
+      max_crop_noise: 100
+      cam_size: [46, 30]
+      K: 6
+      crop_shape: [256, 256]
+      post_processing_dim: 256
+      num_classes: 2
+      global_model: 'resnet22'
+      percent_t: 0.02
