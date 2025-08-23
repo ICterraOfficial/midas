@@ -2,7 +2,11 @@
 ![](https://img.shields.io/badge/OpenCV-4.6-blue?style=plastic)
 ![](https://img.shields.io/badge/Pydicom-2.3-red?style=plastic)
 ![](https://img.shields.io/badge/Numpy-1.24-yellow?style=plastic)
+
 # DoSReMC: Domain Shift Resilient Mammography Classification using Batch Normalization Adaptation
+
+---
+
 This repository was created as part of [our research](https://arxiv.org/) on batch normalization layers and its effects on the mammography classification under domain shift.
 
 **Contents of the Repository:**
@@ -15,7 +19,8 @@ This repository was created as part of [our research](https://arxiv.org/) on bat
 
 This repository serves as a valuable resource for breast cancer recognition using mammography images. Contributions, questions, and feedback are welcome.
 
-Project Organization
+## Project Organization
+
 ------------
 
     ├── LICENSE
@@ -76,24 +81,48 @@ Project Organization
 
 --------
 
+
 ## Development Environment
+
+---
 
 For an efficient and organized development process, it is recommended to use a virtual environment. To run the code seamlessly, add the src folder to your interpreter. For users of virtualenvwrapper, run the following command in the project directory while the virtual environment is active: add2virtualenv src.
 
+
+
 ## Project Information
 
-### 1. Data
+---
+
+### Data
+
+---
 
 An in-house FFDM dataset, HCTP, along with [VinDr-Mammo](https://doi.org/10.1038/s41597-023-02100-7) and [CSAW-CC (mammography)](https://doi.org/10.5878/45vm-t798), were used. The clinical data used in this study are not publicly available due to institutional data ownership and confidentiality policies. Access to the data may be considered on reasonable request and with permission from the corresponding institutional authorities.
 
-
-### 3. Results
 <br>
-#### 3.1. ROC- and PR-AUC Scores
+
+### Results
+
+---
+
+#### ROC- and PR-AUC Scores
+
+---
+
+<br>
+
 <div align="center">
     <img src="reports/figures/results.png" alt="Results" width="750"  height="550" />
-    <p>Table 2: The first column indicates the models trained on the source domain, while the header row lists the target domains used for evaluation. _tr_ and _tt_ represent the training- and test-time BN statistics used for evaluation.</p>
+    <p>Table 2: Models follow the notation <code>𝓜<sub>source→target</sub><sup>statistics</sup></code> where <em>source</em> is the training dataset, <em>target</em> is the evaluation dataset, and the superscript <em>statistics</em> indicates the BN statistics used: <em>tr</em> for training-time moving averages, <em>tt</em> for test-time recomputed statistics. The model denoted with an apostrophe (<code>'</code>) indicates evaluation conducted on input data that has been normalized to the [0, 1] range.</p>
 </div>
+
+<br>
+
+#### Appendix A. Kernel Density Estimation (KDE)
+
+---
+
 
 <br>
 <div align="center">
@@ -106,17 +135,22 @@ An in-house FFDM dataset, HCTP, along with [VinDr-Mammo](https://doi.org/10.1038
 
 <div align="center">
     <img src="reports/figures/kde_l4b2bn2.png" alt="ResNet Layer: 4, Block: 2, BN: 2" width="600"  height="850" />
-    <p>Figure 12: KDEs of per-channel activations for BN layers in the second block of ResNet layers 2, 3, and 4.</p>
+    <p>Figure A.13: KDEs of per-channel activations for BN layers in the second block of ResNet layers 2, 3, and 4. All KDEs in this section are computed using a mini-batch of 16 images sampled from the HCTP dataset. </p>
+</p>
+</p>
 </div>
 
 ## Reference
 
-    @article{name, 
+---
+
+If you find this work useful, please cite our paper:
+
+    @article{akyüz2025dosremc, 
     title={DoSReMC: Domain Shift Resilient Mammography Classification using Batch Normalization Adaptation},
-    author={Uğurcan Akyüz∗, Deniz Katircioglu-Öztürk, Emre K. Süslü, Burhan Keleş, Mete C. Kaya, Gamze Durhan, Meltem G. Akpınar, Figen B. Demirkazık, Gözde B. Akar},
-    journal={},
-    pages={},
-    year={},
-    publisher={}
+    author={Akyüz, Uğurcan and Katircioglu-Öztürk, Deniz and Süslü, Emre K and Keleş, Burhan and Kaya, Mete C and Durhan, Gamze and Akpınar, Meltem G and Demirkazık, Figen B and Akar, Gözde B},
+    journal={arXiv preprint arXiv:2508.15452},
+    year={2025},
+    doi={10.48550/arXiv.2508.15452}
 <br><br><br>
 <p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
