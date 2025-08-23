@@ -5,7 +5,7 @@
 
 # DoSReMC: Domain Shift Resilient Mammography Classification using Batch Normalization Adaptation
 
-This repository was created as part of [our research](https://arxiv.org/) on batch normalization layers and its effects on the mammography classification under domain shift.
+This repository was created as part of [our research](https://arxiv.org/abs/2508.15452) on batch normalization layers and its effects on the mammography classification under domain shift.
 
 **Contents of the Repository:**
 
