@@ -116,12 +116,14 @@ An in-house FFDM dataset, HCTP, along with [VinDr-Mammo](https://doi.org/10.1038
 
 If you find this work useful, please cite our paper:
 
-    @article{akyüz2025dosremc, 
+> Akyüz, U., Katircioglu-Öztürk, D., Süslü, E.K., Keleş, B., Kaya, M.C., Durhan, G., Akpınar, M.G., Demirkazık, F.B. and Akar, G.B., 2025. DoSReMC: Domain Shift Resilient Mammography Classification using Batch Normalization Adaptation. arXiv preprint arXiv:2508.15452.
+
+    @article{akyuz2025dosremc, 
     title={DoSReMC: Domain Shift Resilient Mammography Classification using Batch Normalization Adaptation},
-    author={Akyüz, Uğurcan and Katircioglu-Öztürk, Deniz and Süslü, Emre K and Keleş, Burhan and Kaya, Mete C and Durhan, Gamze and Akpınar, Meltem G and Demirkazık, Figen B and Akar, Gözde B},
+    author={Aky{\"u}z, U{\u{g}}urcan and Katircioglu-{\"O}zt{\"u}rk, Deniz and S{\"u}sl{\"u}, Emre K and Kele{\c{s}}, Burhan and Kaya, Mete C and Durhan, Gamze and Akp{\i}nar, Meltem G and Demirkaz{\i}k, Figen B and Akar, G{\"o}zde B},    
     journal={arXiv preprint arXiv:2508.15452},
     year={2025},
-    doi={10.48550/arXiv.2508.15452}
+    doi={10.48550/arXiv.2508.15452}}
 
 <br><br><br>
 <p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
